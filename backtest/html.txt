@@ -1,0 +1,19 @@
+const formholder = document.getElementById("formholder"); // айди твоей формы
+            
+            const sendbutton = document.getElementById("send") // айди твоей кнопки отправить
+            
+
+            sendbutton.addEventListener("click",()=>{
+                fetch(/email",{
+                    method: "POST",
+                    headers: {
+                        "body": JSON.stringify({
+                        name:  document.getElementById("name").value,
+                        lname: document.getElementById("lname").value,
+                        tel: document.getElementById("tel").value,
+                        mail: document.getElementById("mail").value,
+                        coach: document.getElementById("coach").value
+			// вместо этих верхних полей берешь свои 
+                        })
+                    }        
+                })

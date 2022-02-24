@@ -1,0 +1,247 @@
+@font-face {
+	font-family: 'BebasNeueCyrillic'; 
+	src: url("../fonts/BebasNeueCyrillic.ttf"); ; 
+}
+body
+{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    font-family: 'BebasNeueCyrillic';
+}
+header{
+    margin-top: 10;
+    width: 60%;
+    height: 6%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 20%;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    
+    margin-left: 10;
+    margin-top: 2;
+}
+.menu{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.menu_link{
+    font-size: large;
+    width: 25%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    color: white;
+}
+.menu_link:hover
+{
+    font-size: 220%;
+    cursor: pointer;
+    color: red;
+}
+#musclesblock
+{
+    position: absolute;
+    left: 5%;
+    top: 25%;
+    width: 45%;
+    height: 50%;
+}
+#muscleimg
+{
+    width: 120%;
+}
+#programslist
+{
+    width: 33%;
+    height: 64%;
+    position: absolute;
+    left: 65%;
+    top: 25%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.trainingprograms
+{
+    width: 100%;
+    height: 25%;
+    transition: 0.3s; 
+    transform: scale(1);
+    display: block;
+    font-size: 200%;
+    color: white;
+    border-left: 1px solid white ;
+}
+.trainingprogramsactive
+{
+    height: 100%;
+    transition: 1s;
+    transform: scale(1);
+}
+.trainingprograms:hover
+{
+    transform: scale(1.05);
+    transition: 1s;
+    cursor: pointer;
+}
+#buttonsmenu
+{
+    display: flex;
+    justify-content: space-around;
+    width: 33%;
+    height: 5%;
+    position: absolute;
+    left: 65%;
+    top: 90%;
+    font-size: 400%;
+    color: white;
+    display: none;
+    transition: 1s;
+    transform: scale(1);
+}
+#buttonsmenu > div:hover
+{
+    cursor: pointer;
+    color: red;
+    font-size: 105%;
+}
+#chestmuscles{
+    position: absolute;
+    width: 1%;
+    height: 2%;
+    border-radius: 50%;
+    background-color: red;
+    left: 16%;
+    top: 39%;
+    transform: scale(1);
+    transition: 1s;
+}
+#chestmuscles:hover{
+    transform: scale(1.20);
+    transition: 1s;
+    
+}
+#trainigprogrammstext1
+{
+    padding-top: 1%;
+    width: 100%;
+    height: 67%;
+    text-align: center;
+    
+}
+#trainigprogrammstext2
+{
+    padding-top: 1%;
+    width: 100%;
+    height: 67%;
+    text-align: center;
+    display: none;
+}
+#trainigprogrammstext3
+{
+    padding-top: 1%;
+    width: 100%;
+    height: 67%;
+    text-align: center;
+    display: none;
+}
+#activedropmenu{
+    position: fixed;
+    left: 85%;
+    top: 2%;
+    text-align: center;
+    font-size: 300%;
+    color: white;
+    width: 10%;
+    z-index: 100;
+    display: none;
+}
+#activedropmenu:hover
+{
+    cursor: pointer;
+    font-size: 310%;
+    color: red;
+}
+
+
+#dropmenu{
+    font-size: 500%;
+    z-index: 10;
+    left: 65%;
+    position: fixed;
+    display: none;
+    top: 10%;
+    
+    width: 30%;
+}
+
+@media screen and (max-width: 1440px){
+    #musclesblock{
+        top: 33%;
+    }
+    #trainigprogrammstext1{
+        font-size: 80%;
+    }
+    #trainigprogrammstext2{
+        font-size: 80%;
+    }
+    #trainigprogrammstext3{
+        font-size: 80%;
+    }
+}
+@media screen and (max-width: 1000px){
+    
+    .menu_link{
+        font-size: 100%;
+    }
+    #musclesblock{
+        width: 70%;
+        left: 10%;
+        height: 40%;
+        top: 15%;
+    }
+    #programslist{
+        top: 45%;
+        flex-direction: column;
+       
+        width: 80%;
+        left: 27%;
+        height: 50%;
+
+    }
+    .trainingprograms{
+        width: 60%;
+        height: 15%;
+    }
+    .trainingprogramsactive{
+        height: 50%;
+    }
+    .menu{
+        display: none;
+    }
+    #activedropmenu{
+        display: block;
+    }
+    .menu_link:hover{
+        font-size: 110%;
+    }
+
+    .menu_link{
+        font-size: 100%;
+        width: 100%;
+        border-bottom: 5px solid red;
+    }
+}

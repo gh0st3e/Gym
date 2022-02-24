@@ -1,0 +1,49 @@
+var app = require('express')();
+// подключаешь сервер
+
+app.get('/form', function (req, res) {
+    res.sendFile(__dirname + '/form.html');
+});
+// отправляешь на свой сервер html
+
+ar port = process.env.PORT || 3000;
+app.listen(port, function () {
+    console.log('listening web server');
+});
+//Прослушиваешь свой порт на порте 3000
+//Доступ будет по localhsot:3000/form
+
+app.post('/email', function (req, res) {
+    console.log(req.headers['body']);
+	// Ниже меняешь данные под те которые ты делал в html
+    let ClientName = JSON.parse(req.headers['body']).name
+    let ClientLname = JSON.parse(req.headers['body']).lname
+    let ClientTel = JSON.parse(req.headers['body']).tel
+    let ClientEmail = JSON.parse(req.headers['body']).mail
+    let Coach = JSON.parse(req.headers['body']).coach
+    let Text = "Здравствуйте, " + ClientName + " " + ClientLname + ". Вы оставили заявку на заказ тренера " + Coach + ". Мы позвоним вам по номеру: " + ClientTel;
+    
+    sendemail(ClientEmail,Text); // Отправка на почту
+    
+    
+    });
+
+require('dotenv').config()
+const nodemailer = require('nodemailer')
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: "coachkurswork@gmail.com",
+        pass: "Denis2003"
+    }
+})
+function sendemail(email,text) // Функция отправка данных на почту
+{
+    const mailOptions ={
+        from: 'coachkurswork@gmail.com',
+        to: email ,
+        subject: 'Заявка на сайте',
+        text: text
+    }
+    transporter.sendMail(mailOptions)
+}

@@ -1,0 +1,237 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+
+            }
+            body {
+                font-family: 'Roboto', sans-serif;
+                font-family: 'Josefin Sans', sans-serif;
+            }
+            input {
+                height: 45px;
+                width: 100%;
+                color: #3B5983;
+                font-size: 14px;
+                line-height: 16px;
+                border: 2px solid #E9F2FF;
+                border-radius: 5px;
+                padding-left: 25px;
+            }
+            select{
+                height: 45px;
+                width: 100%;
+                color: #3B5983;
+                font-size: 14px;
+                line-height: 16px;
+                border: 2px solid rgb(247, 130, 130);
+                border-radius: 5px;
+                padding-left: 25px;
+            }
+            input:focus {
+                outline: none;
+                border: 2px solid #C1D9FD;
+            }
+            input:valid {
+                border-color: greenyellow;
+            }
+            input:invalid {
+                border-color: orange;
+            }
+            input:not(:focus):invalid {
+                border-color: rgb(247, 130, 130);
+            }
+            main {
+                
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .register-form-container {
+                
+                position: relative;
+                z-index: 2;
+                max-width: 415px;
+                width: 100%;
+                background: black;
+                box-shadow: 0px 6px 50px rgba(217, 229, 255, 0.7);
+                border-radius: 20px;
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-top: 38px;
+                padding-bottom: 38px;
+                
+            }
+
+            .form-title {
+                color: rgb(247, 130, 130);
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 23px;
+                margin-bottom: 38px;
+            }
+            .form-field {
+                margin-bottom: 13px;
+            }
+            #send {
+                width: 100%;
+                font-weight: bold;
+                font-size: 14px;
+                display:block;
+                height: 45px;
+                background: rgb(247, 130, 130);
+                border-radius: 5px;
+                color:#fff;
+                text-transform: uppercase;
+                text-align: center;
+                line-height: 45px;
+                cursor: pointer;
+                border: none;
+            }
+            .button:hover {
+                background-color: #0D6CF2;
+            }
+            a.button {
+                text-decoration: none;
+            }
+            .button-google {
+                color:#C6CFDC;
+                background: #F2F6FF;
+            }
+            .button-google:hover {
+                background: #E2E6F0;
+                color: #fff;
+            }
+            .divider {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 14px;
+                color: #405D87;
+                text-align: center;
+                padding-top: 25px;
+                padding-bottom: 25px;
+            }
+            #sucsess{
+                width: 80%;
+                height: 20%;
+                font-size: 1000%;
+                color: greenyellow;
+                text-align: center;
+                position: absolute;
+                left: 10%;
+                top: 30%;
+                display: none;
+                
+            }
+            #stat{
+                
+                text-align: center;
+                text-decoration: none;
+                color: rgb(247, 130, 130);
+                display: flex;
+                justify-content: center;
+                height: 10%;
+                font-size: 150%;
+                align-items: flex-end;
+                transform: scale(1);
+                transition: 1s;
+            }
+            #stat:hover{
+                transform: scale(1.05);
+                transition: 1s;
+            }
+
+            @media screen and (max-width: 1000px){
+                .register-form-container{
+                    max-width: 600px;
+                    height: 50%;
+                }
+                .form-field{
+                    height: 10%;
+                }
+            }
+            
+    </style>
+    </head>
+        <body>
+            <main>
+                <div class="register-form-container">
+                    <form action="">
+                        <h1 class="form-title">
+                            Оставить заявку
+                        </h1>
+                        <div class="form-fields">
+                            <div class="form-field">
+                                <input id="name" type="text" placeholder="Name" required pattern="[a-zA-Z]+"
+                                    title="Имя может содержать только буквы.">
+                            </div>
+                            <div class="form-field">
+                                <input id="lname" type="text" placeholder="Surname" required pattern="[a-zA-Z]+"
+                                    title="Имя может содержать только буквы.">
+                            </div>
+                            <div class="form-field">
+                                <input id="tel" type="number" placeholder="Phone" 
+                                    title="Телефон может содержать только цифры.">
+                            </div>
+                            <div class="form-field">
+                                <input id="mail" type="email" placeholder="@email" required>
+                            </div>
+                            <div class="form-field">
+                                <select id="coach">
+                                    <option>Aleksandr Baykov</option>
+                                    <option>Denis Leonov</option>
+                                    <option>Andrei Ivanov</option>
+                                </select>
+                            
+                            </div>
+                        </div>
+                        <div class="form-buttons">
+                            <button id="send">Отправить</button>
+                        </div>
+                        <a id="stat" href="stat">Рейтинг тренеров</a>
+                        <a id="stat" href="reviews">Отзывы</a>
+                    </form>
+                </div>
+        </main>
+        </body>
+        <script>
+
+            const bodyimg = document.getElementsByTagName("body");
+            bodyimg[0].style.backgroundImage = "url('https://img2.goodfon.ru/original/5886x3602/4/ff/muscles-bodybuilder-shtanga.jpg')"
+            bodyimg[0].style.backgroundSize="100% 100%"
+
+            const formholder = document.getElementById("formholder");
+            const sucsessMesage = document.getElementById("sucsess")
+            const sendbutton = document.getElementById("send")
+            const urll = "https://course-project-back.herokuapp.com"
+
+            sendbutton.addEventListener("click",()=>{
+                fetch(urll+"/email",{
+                    method: "POST",
+                    headers: {
+                        "body": JSON.stringify({
+                        name:  document.getElementById("name").value,
+                        lname: document.getElementById("lname").value,
+                        tel: document.getElementById("tel").value,
+                        mail: document.getElementById("mail").value,
+                        coach: document.getElementById("coach").value
+                        })
+                    }        
+                })
+                formholder.style.display="none"
+                sendbutton.style.display="none"
+                sucsessMesage.style.display="block"
+            })
+        </script>
+</html>

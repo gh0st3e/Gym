@@ -1,0 +1,218 @@
+@font-face {
+	font-family: 'BebasNeueCyrillic'; 
+	src: url("../fonts/BebasNeueCyrillic.ttf"); ; 
+}
+body{
+    background-color: black;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 130%;
+    overflow-x: hidden;
+    font-family: 'BebasNeueCyrillic';
+    margin: 0;
+    padding: 0;
+}
+header{
+    margin-top: 10;
+    width: 60%;
+    height: 6%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 20%;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    
+    margin-left: 10;
+    margin-top: 2;
+}
+.menu{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.menu_link{
+    font-size: large;
+    width: 25%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    color: white;
+}
+.menu_link:hover
+{
+    font-size: 220%;
+    cursor: pointer;
+    color: red;
+}
+
+#container
+{
+    position: absolute;
+    width: 30%;
+    height: 60%;
+    top: 15%;
+    left: 40%;
+}
+#slider{
+    width: 84.5%;
+    height: 100%;
+    border-top: 3px solid white;
+    overflow: hidden;
+}
+#slider-line{
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+#slider-next{
+    width: 5%;
+    height: 10%;
+    transform: scale(1);
+    background-image: url("../img/arrowright.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 75%;
+    left: 60%;
+}
+#slider-next:hover{
+    transform: scale(1.05);
+}
+#slider-prev{
+    width: 5%;
+    height: 10%;
+    transform: scale(1);
+    background-image: url("../img/arrowleft.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 75%;
+    left: 40%;
+}
+#slider-prev:hover{
+    transform: scale(1.05);
+}
+#activecoach{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    top: 75%;
+    left: 47.5%;
+    
+}
+.coachcircle{
+    width: 5%;
+    height: 10%;
+    background-color: white;
+    border-radius: 50%;
+}
+.namesofcoaches{
+    width: 30%;
+    height: 20%;
+    top: 40%;
+    text-align: center;
+    left: 5%;
+    position: absolute;
+    
+    font-size: 500%;
+    color: white;
+    opacity: 0;
+}
+.achievesofcoaches
+{
+    width: 25%;
+    height: 20%;
+    top: 40%;
+    text-align: center;
+    left: 70%;
+    position: absolute;
+    
+    font-size: 500%;
+    color: white;
+    opacity: 0;
+}
+.desribeofcoach{
+    width: 80%;
+    position: absolute;
+    left: 12%;
+    height: 40%;
+    text-align: center;
+    top: 90%;
+    opacity: 0;
+    font-size: 300%;
+    color: white;
+}
+#activedropmenu{
+    position: fixed;
+    left: 85%;
+    top: 2%;
+    text-align: center;
+    font-size: 300%;
+    color: white;
+    width: 10%;
+    z-index: 100;
+    display: none;
+}
+#activedropmenu:hover
+{
+    cursor: pointer;
+    font-size: 310%;
+    color: red;
+}
+
+
+#dropmenu{
+    font-size: 500%;
+    z-index: 10;
+    left: 65%;
+    position: fixed;
+    display: none;
+    top: 10%;
+    
+    width: 30%;
+}
+
+@media screen and (max-width: 1000px){
+    #container{
+        width: 70%;
+        height: 50%;
+        left: 22%;
+    }
+    .namesofcoaches{
+        top: 80%;
+        font-size: 300%;
+    }
+    .achievesofcoaches{
+        top: 80%;
+        font-size: 300%;
+    }
+    .desribeofcoach{
+        font: 200%;
+        top: 90%;
+    }
+    #activedropmenu{
+        display: block;
+    }
+    .menu_link:hover{
+        font-size: 110%;
+    }
+
+    .menu_link{
+        font-size: 100%;
+        width: 100%;
+        border-bottom: 5px solid red;
+    }
+    .menu{
+        display: none;
+    }
+}

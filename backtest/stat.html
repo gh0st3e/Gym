@@ -1,0 +1,295 @@
+<html>
+    <head>
+        <title>Statistic</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
+        <style>
+          body{
+            
+            overflow: hidden;
+            background-color: black;
+            font-family: 'Josefin Sans', sans-serif;
+          }
+          #coach1{
+            color: red;
+            font-size: 300%;
+            font-family: 'Bebas Neue', cursive;
+          }
+          #coach1length{
+            color: red;
+            font-size: 300%;
+          }
+
+          #coach2{
+            color: red;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 300%;
+          }
+          #coach2length{
+            color: red;
+            font-size: 300%;
+          }
+
+          #coach3{
+            color: red;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 300%;
+          }
+          #coach3length{
+            color: red;
+            font-size: 300%;
+          }
+          #place{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: space-around;
+            align-items: center;
+          }
+          #coaches{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: space-around;
+            position: absolute;
+            top: 80%;
+            left: -1%;
+            
+          }
+          #counts{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: space-around;
+            position: absolute;
+            top: 90%;
+          }
+          #coach1img{
+            
+            width: 20%;
+            height: 50%;
+            border: 1px solid red;
+          }
+          #coach2img{
+            width: 20%;
+            height: 50%;
+            border: 1px solid red
+          }
+          #coach3img{
+            width: 20%;
+            height: 50%;
+            border: 1px solid red;
+          }
+          a{
+            position: absolute;
+            font-size: 400%;
+            top: 5%;
+            left: 43%;
+            text-decoration: none;
+            color: red;
+          }
+          #stars1{
+            position: absolute;
+            top: 15%;
+            left: 12%;
+            width: 100%;
+          }
+          #stars2{
+            position: absolute;
+            top: 15%;
+            left: 45%;
+            width: 100%;
+          }
+          #stars3{
+            position: absolute;
+            top: 15%;
+            left: 78%;
+            width:100%;
+          }
+          .grayscale { filter: grayscale(100%); }
+
+          @media screen and (max-width: 1000px){
+            #place{
+              width: 150%;
+              height: 60%;
+              top: 20%;
+              position: absolute;
+              
+            }
+            #coaches{
+              width: 150%;
+              top:70%
+            }
+            #counts{
+              width: 150%;
+              top:75%;
+            }
+            #stars1{
+              left:20%;
+              top: 29%;
+              height: 50%;
+            }
+            #stars2{
+              left:69%;
+              top: 29%;
+              height: 50%;
+            }
+            #stars3{
+              left:119%;
+              top: 29%;
+              height: 50%;
+            }
+            a{
+              left: 60%;
+              top: 100%;
+            }
+          }
+
+        </style>
+    </head>
+    <body>
+
+        
+
+        <div id="place">
+
+          <div id="coach1img">
+            <img width="100%" height="100%" src="https://sun9-16.userapi.com/impg/9n0lqKgxeGUgI59hMwOHMJahKDc350UU9S63CQ/OwIceShcOxk.jpg?size=600x800&quality=96&sign=4dfa22f9ec714edd0746d5f31df2a611&type=album">
+          </div>
+          <div id="coach2img">
+            <img width="100%" height="100%" src="https://sun9-20.userapi.com/impg/8pfnXzAEyYRsGCnXGZS9tBHAOG8l5o4iBueRJQ/W9AftAiBH5s.jpg?size=600x800&quality=96&sign=8d237e779025025a0d0fba8f0e2d735e&type=album">
+          </div>
+          <div id="coach3img">
+            <img width="100%" height="100%" src="https://sun9-45.userapi.com/impg/QBrEzMRtUQQBO8qkDk9jEmHJeRZjTtkICAYQJw/vCcqq446jKc.jpg?size=600x800&quality=96&sign=f267849e7c654b5cffaadcfe27219194&type=album">
+          </div>
+          
+        </div>
+        <div id="coaches">
+          <div id="coach1"></div>
+          <div id="coach2"></div>
+          <div id="coach3"></div>
+        </div>
+        
+        <div id="counts">
+          <div id="coach1length">Заказали: </div>
+          <div id="coach2length">Заказали: </div>
+          <div id="coach3length">Заказали: </div>
+        </div>
+        
+        <div id="stars1">
+          <label><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+          <label><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+          <label><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+          <label><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+          <label><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+        </div>
+        <div id="stars2">
+          <label><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+          <label><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+          <label><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+          <label><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+          <label><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+        </div>
+        <div id="stars3">
+          <label><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+          <label><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+          <label><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+          <label><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+          <label><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+        </div>
+        
+
+        <a href="form">Вернуться</a>
+    </body>
+    <script>
+
+            // const bodyimg = document.getElementsByTagName("body");
+            // bodyimg[0].style.backgroundImage = "url('https://img2.goodfon.ru/original/5886x3602/4/ff/muscles-bodybuilder-shtanga.jpg')"
+            // bodyimg[0].style.backgroundSize="100% 100%"
+
+      let coach1name = document.getElementById("coach1");
+      let coach1length = document.getElementById("coach1length")
+
+      let coach2name = document.getElementById("coach2");
+      let coach2length = document.getElementById("coach2length")
+
+      let coach3name = document.getElementById("coach3");
+      let coach3length = document.getElementById("coach3length")
+
+      const urll = "https://course-project-back.herokuapp.com"
+
+        async function getData() {
+        try {
+            let res = await fetch('/info', {
+            mode: 'cors'
+          });
+
+          if (!res.ok) {
+            console.log(res);
+            throw new Error( res.statusText || res.status );
+          }
+
+          let data = await res.json();
+          console.log(data);
+          coach1name.append(data.COACH1); 
+          coach1length.append(data.COACHLENGTH1 + " раза")
+
+          coach2name.append(data.COACH2); 
+          coach2length.append(data.COACHLENGTH2 + " раза")
+
+          coach3name.append(data.COACH3); 
+          coach3length.append(data.COACHLENGTH3 + " раза")
+
+          bordercolor(data);
+          stars(data)
+        } catch (err) {
+          console.error(err);
+          alert('Произошла ошибка...');
+        }
+      }
+      getData();
+
+      function bordercolor(data)
+      {
+        let coach1 = document.getElementById("coach1img");
+        let coach2 = document.getElementById("coach2img");
+        let coach3 = document.getElementById("coach3img");
+
+        let coach1length = data.COACHLENGTH1;
+        let coach2length = data.COACHLENGTH2;
+        let coach3length = data.COACHLENGTH3;
+
+        console.log(coach2length);
+      }
+
+      function stars(data)
+      {
+        
+        let stars1 = document.getElementById("stars1")
+        let countstars1 = data.STAR1;
+
+        let stars2 = document.getElementById("stars2")
+        let countstars2 = data.STAR2;
+
+        let stars3 = document.getElementById("stars3")
+        let countstars3 = data.STAR3;
+        for(let i=0;i<countstars1;i++)
+        {
+          stars1.children[i].children[0].classList.remove("grayscale")
+        }
+        for(let i=0;i<countstars2;i++)
+        {
+          stars2.children[i].children[0].classList.remove("grayscale")
+        }
+        for(let i=0;i<countstars3;i++)
+        {
+          stars3.children[i].children[0].classList.remove("grayscale")
+        }
+        console.log(countstars1)
+      }
+
+      
+    </script>
+</html>

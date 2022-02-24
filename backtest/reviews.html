@@ -1,0 +1,439 @@
+<html>
+    <head>
+        <title>Отзывы</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
+        <style>
+          * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+
+            }
+            body {
+                
+                
+                font-family: 'Bebas Neue', cursive;
+            }
+            input {
+                height: 45px;
+                width: 100%;
+                color: #3B5983;
+                font-size: 14px;
+                line-height: 16px;
+                border: 2px solid #E9F2FF;
+                border-radius: 5px;
+                padding-left: 25px;
+            }
+            select{
+                height: 45px;
+                width: 100%;
+                color: #3B5983;
+                font-size: 14px;
+                line-height: 16px;
+                border: 2px solid rgb(247, 130, 130);
+                border-radius: 5px;
+                padding-left: 25px;
+            }
+            input:focus {
+                outline: none;
+                border: 2px solid #C1D9FD;
+            }
+            input:valid {
+                border-color: greenyellow;
+            }
+            input:invalid {
+                border-color: orange;
+            }
+            input:not(:focus):invalid {
+                border-color: rgb(247, 130, 130);
+            }
+            main {
+                
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .register-form-container {
+                
+                position: relative;
+                z-index: 2;
+                top: 10%;
+                left: 3%;
+                max-width: 415px;
+                width: 100%;
+                background: black;
+                box-shadow: 0px 6px 50px rgba(217, 229, 255, 0.7);
+                border-radius: 20px;
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-top: 38px;
+                padding-bottom: 38px;
+                
+            }
+
+            .form-title {
+                color: rgb(247, 130, 130);
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 23px;
+                margin-bottom: 38px;
+            }
+            .form-field {
+                margin-bottom: 13px;
+            }
+            #send {
+                width: 100%;
+                font-weight: bold;
+                font-size: 14px;
+                display:block;
+                height: 45px;
+                background: rgb(247, 130, 130);
+                border-radius: 5px;
+                color:#fff;
+                text-transform: uppercase;
+                text-align: center;
+                line-height: 45px;
+                cursor: pointer;
+                border: none;
+            }
+            .button:hover {
+                background-color: #0D6CF2;
+            }
+            a.button {
+                text-decoration: none;
+            }
+            #review{
+              height: 20% !important;
+            }
+            .divider {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 14px;
+                color: #405D87;
+                text-align: center;
+                padding-top: 25px;
+                padding-bottom: 25px;
+            }
+            #sucsess{
+                width: 80%;
+                height: 20%;
+                font-size: 1000%;
+                color: greenyellow;
+                text-align: center;
+                position: absolute;
+                left: 10%;
+                top: 30%;
+                display: none;
+                
+            }
+            #stat{
+                
+                text-align: center;
+                text-decoration: none;
+                color: rgb(247, 130, 130);
+                display: flex;
+                justify-content: center;
+                height: 10%;
+                font-size: 150%;
+                align-items: flex-end;
+                transform: scale(1);
+                transition: 1s;
+            }
+            #stat:hover{
+                transform: scale(1.05);
+                transition: 1s;
+            }
+
+            #stars_holder{
+              
+              width: 500% !important;
+            }
+
+
+          .check{
+            position: absolute;
+            visibility: hidden;
+          }
+          img{
+            transform: scale(1);
+            transition: 1s ;
+          }
+          img:hover{
+            transform: scale(1.5);
+            transition: 1s;
+          }       
+          .grayscale { filter: grayscale(100%); }
+
+          #reviews
+          {
+              width: 60%;
+              height: 75%;
+              
+              position: absolute;
+              left: 30%;
+              top: 10%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-around;
+          }
+          #firstreview{
+              width: 60%;
+              height: 30%;
+              border: 1px solid red;
+              background-color: black;
+              color: white;
+              text-align: center;
+              font-size: 100%;
+          }
+          #secondreview{
+              width: 60%;
+              height: 30%;
+              border: 1px solid red;
+              background-color: black;
+              color: white;
+              text-align: center;
+          }
+          #thirdreview{
+              width: 60%;
+              height: 30%;
+              border: 1px solid red;
+              background-color: black;
+              color: white;
+              text-align: center;
+          }
+          #firstreviewname{
+            position: relative;
+            left: 30%;
+            top: 60%;
+            font-size: 200%;
+          }
+         
+          #secondreviewname{
+            position: relative;
+            left: 30%;
+            top: 60%;
+            font-size: 200%;
+          }
+          #thirdreviewname{
+            position: relative;
+            left: 30%;
+            top: 60%;
+            font-size: 200%;
+          }
+          #firstreviewcoach{
+            position: relative;
+            left: -25%;
+            top: 80%;
+            font-size: 200%;
+          }
+          #secondreviewcoach{
+            position: relative;
+            left: -25%;
+            top: 80%;
+            font-size: 200%;
+          }
+          #thirdreviewcoach{
+            position: relative;
+            left: -25%;
+            top: 80%;
+            font-size: 200%;
+          }
+
+          @media screen and (max-width: 1000px){
+                .register-form-container{
+                    max-width: 600px;
+                    
+                }
+                #reviews{
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    left: 100%;
+                    width: 150%;
+                    left: 5%;
+                    height: 70%;
+                    top: 80%;
+                }
+          }
+          
+
+        </style>
+    </head>
+    <body>
+      <div class="register-form-container">
+        <form action="">
+            <h1 class="form-title">
+                Оставить отзыв
+            </h1>
+            <div class="form-fields">
+                <div class="form-field">
+                    <input id="name" type="text" placeholder="Name" required>
+                </div>
+                <div class="form-field">
+                    <input id="review" type="text" placeholder="Review" required
+                        >
+                </div>
+                <div class="form-field">
+                    <select id="coach">
+                        <option>Aleksandr Baykov</option>
+                        <option>Denis Leonov</option>
+                        <option>Andrei Ivanov</option>
+                    </select>
+                </div>
+            </div>
+            <div id="stars_holder">
+              <label onclick="getCheckedCheckBoxes()"><input type="checkbox" value="1" class="check" ><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+              <label onclick="getCheckedCheckBoxes()"><input type="checkbox" value="2" class="check"><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+              <label onclick="getCheckedCheckBoxes()"><input type="checkbox" value="3" class="check"><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+              <label onclick="getCheckedCheckBoxes()"><input type="checkbox" value="4" class="check"><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+              <label onclick="getCheckedCheckBoxes()"><input type="checkbox" value="5" class="check"><img width="2%" height="3%" src="http://s1.iconbird.com/ico/2013/12/505/w450h4001385925286Star.png" class="grayscale"/></label>
+            </div>
+            <div class="form-buttons">
+                <button id="send">Отправить</button>
+            </div>
+            <a id="stat" href="form">Оставить заявку</a>
+            <a id="stat" href="stat">Рейтинг тренеров</a>
+        </form>
+    </div>
+
+
+        <div id="reviews">
+            <div id="firstreview">
+                <div id="firstreviewcoach">
+                    coach
+                </div> 
+                <div id="firstreviewname">
+                    name
+                </div>
+            </div>
+            <div id="secondreview">
+                <div id="secondreviewcoach">
+                    coach
+                </div> 
+                <div id="secondreviewname">
+                    name
+                </div>
+            </div>
+            <div id="thirdreview">
+                <div id="thirdreviewcoach">
+                    coach
+                </div> 
+                <div id="thirdreviewname">
+                    name
+                </div>
+            </div>
+        </div>
+
+
+        
+        
+        
+        
+    </body>
+    <script>
+
+const bodyimg = document.getElementsByTagName("body");
+            bodyimg[0].style.backgroundImage = "url('https://img2.goodfon.ru/original/5886x3602/4/ff/muscles-bodybuilder-shtanga.jpg')"
+            bodyimg[0].style.backgroundSize="1000% 1000%"
+            
+            bodyimg[0].style.backgroundRepeat="no-repeat"
+        
+        
+
+        function getCheckedCheckBoxes() {
+          var checkboxes = document.getElementsByClassName('check');
+          let lb = document.getElementsByTagName("img")
+          
+          var checkboxesChecked = []; // можно в массиве их хранить, если нужно использовать 
+          for (var index = 0; index < checkboxes.length; index++) {
+            if (checkboxes[index].checked) {
+              
+                for(let i = index;i>=0;i--)
+                {
+                  lb[i].classList.remove("grayscale");
+                }
+                
+                checkboxesChecked.push(checkboxes[index].value); // положим в массив выбранный
+                console.log(checkboxesChecked[0])
+                return checkboxesChecked[0];
+            }
+          }
+          return checkboxesChecked; // для использования в нужном месте
+        }
+
+        let firstreview = document.getElementById("firstreview")
+        let secondreview = document.getElementById("secondreview")
+        let thirdreview = document.getElementById("thirdreview")
+
+        let firstreviewname = document.getElementById("firstreviewname")
+        let secondreviewname = document.getElementById("secondreviewname")
+        let thirdreviewname = document.getElementById("thirdreviewname")
+
+        let firstreviewcoach = document.getElementById("firstreviewcoach")
+        let secondreviewcoach = document.getElementById("secondreviewcoach")
+        let thirdreviewcoach = document.getElementById("thirdreviewcoach")
+        const urll = "https://course-project-back.herokuapp.com"
+
+        const sendbutton = document.getElementById("send")
+        sendbutton.addEventListener("click", ()=>{
+          alert("work");
+            fetch("/sendreview", {
+            method: "POST",
+            headers: {
+                "body" : JSON.stringify({
+                    name : document.getElementById("name").value,
+                    review : document.getElementById("review").value,
+                    coach: document.getElementById("coach").value,
+                    star: getCheckedCheckBoxes()
+                })
+            }
+        })
+        })
+        
+
+
+
+        async function getData() {
+        try {
+            let res = await fetch('/getreviews', {
+            mode: 'cors'
+          });
+
+          if (!res.ok) {
+            console.log(res);
+            throw new Error( res.statusText || res.status );
+          }
+
+          let data = await res.json();
+          console.log(data);
+          let len = data.File.length;
+          console.log(len);
+          console.log(data.File[0].Name)
+
+          firstreview.append(data.File[0].Review)
+          secondreview.append(data.File[1].Review)
+          thirdreview.append(data.File[2].Review)
+
+          firstreviewcoach.append(data.File[0].Coach)
+          secondreviewcoach.append(data.File[1].Coach)
+          thirdreviewcoach.append(data.File[2].Coach)
+
+          firstreviewname.append(data.File[0].Name)
+          secondreviewname.append(data.File[1].Name)
+          thirdreviewname.append(data.File[2].Name)
+
+        } catch (err) {
+          console.error(err);
+          alert('Произошла ошибка...');
+        }
+      }
+      getData();
+    </script>
+</html>
